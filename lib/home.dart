@@ -3,7 +3,7 @@ import 'package:minesweeper/bomb.dart';
 import 'package:minesweeper/numberBox.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => HomePageState();
@@ -186,7 +186,7 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            backgroundColor: Colors.grey.shade800,
+            backgroundColor: Colors.purple.shade800,
             title: const Center(
               child: Text(
                 'YOU LOST',
@@ -200,7 +200,7 @@ class HomePageState extends State<HomePage> {
                     restartGame();
                     Navigator.pop(context);
                   },
-                  color: Colors.grey.shade100,
+                  color: Colors.purple.shade100,
                   child: const Icon(
                     Icons.refresh,
                     color: Colors.black,
@@ -217,7 +217,7 @@ class HomePageState extends State<HomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            backgroundColor: Colors.grey.shade800,
+            backgroundColor: Colors.purple.shade800,
             title: const Center(
               child: Text(
                 'YOU WON',
@@ -231,7 +231,7 @@ class HomePageState extends State<HomePage> {
                     restartGame();
                     Navigator.pop(context);
                   },
-                  color: Colors.grey.shade100,
+                  color: Colors.purple.shade100,
                   child: const Icon(
                     Icons.refresh,
                     color: Colors.black,
@@ -267,13 +267,13 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.purple.shade200,
       body: Column(
         children: [
           // game stats and menu
           Container(
             height: 150,
-            // color: Colors.grey,
+            // color: Colors.purple,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -290,7 +290,7 @@ class HomePageState extends State<HomePage> {
                 GestureDetector(
                   onTap: restartGame,
                   child: Card(
-                    color: Colors.grey[700],
+                    color: Colors.purple[700],
                     child: const Icon(
                       Icons.refresh,
                       color: Colors.white,
