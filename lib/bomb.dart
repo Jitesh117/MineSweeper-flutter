@@ -20,7 +20,7 @@ class MyBomb extends StatelessWidget {
           color: Colors.grey.shade800,
           child: Center(
             child: Text(
-              child.toString(),
+              revealed ? 'X' : '',
               style: TextStyle(
                 color: Colors.white,
               ),

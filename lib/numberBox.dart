@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyNumberBox extends StatelessWidget {
-  MyNumberBox({Key? key, required this.child, required this.revealed,required this.function})
+  MyNumberBox(
+      {Key? key,
+      required this.child,
+      required this.revealed,
+      required this.function})
       : super(key: key);
   final child;
   bool revealed;
@@ -16,7 +20,21 @@ class MyNumberBox extends StatelessWidget {
           color: revealed ? Colors.grey.shade300 : Colors.grey.shade400,
           child: Center(
             child: Text(
-              child.toString(),
+              revealed
+                  ? child != 0
+                      ? child.toString()
+                      : ''
+                  : '',
+              style: TextStyle(
+                color: child == 1
+                    ? Colors.red
+                    : child == 2
+                        ? Colors.blue
+                        : child == 3
+                            ? Colors.green
+                            : Colors.orange,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
